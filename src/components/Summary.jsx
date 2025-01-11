@@ -16,12 +16,12 @@ const Summary = ({ selectedSeats, getSeatPrice, onBook, onClear }) => {
       </ul>
       <p className="total-cost">Total: ₹{totalCost}</p>
       <div className="buttons">
-        <button className="book-button" onClick={onBook} disabled={selectedSeats.length === 0}>
+        <div className="book-button" onClick={onBook} disabled={selectedSeats.length === 0}>
           Book Now
-        </button>
-        <button className="clear-button" onClick={onClear} disabled={selectedSeats.length === 0}>
+        </div>
+        <div className="clear-button" onClick={onClear} disabled={selectedSeats.length === 0}>
           Clear
-        </button>
+        </div>
       </div>
       {selectedSeats.length > 8 && <p className="error">You can only select up to 8 seats.</p>}
     </div>
