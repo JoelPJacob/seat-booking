@@ -34,13 +34,13 @@ The Seat Booking System is a web application that allows users to view and selec
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/JoelPJacob/introdo-react-app.git
+    git clone https://github.com/JoelPJacob/seat-booking.git
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd introdo-react-app
+    cd seat-booking
     ```
 
 3. Install dependencies (if applicable):
