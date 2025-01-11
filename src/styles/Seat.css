@@ -1,0 +1,29 @@
+/* src/styles/Seat.css */
+.seat {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .seat.silver {
+    background-color: #C0C0C0;
+  }
+  
+  .seat.gold {
+    background-color: #FFBF00;
+  }
+  
+  .seat.platinum {
+    background-color: #FF5733;
+  }
+  
+  .seat.selected {
+    background-color: #228B22;
+  }
+  
