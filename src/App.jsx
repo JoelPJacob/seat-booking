@@ -21,9 +21,16 @@ const App = () => {
       prev.includes(seat)
         ? prev.filter((s) => s !== seat)
         : prev.length < 8
-          ? [...prev, seat]
-          : prev // Max 8 seats logic
+        ? [...prev, seat]
+        : prev 
     );
+  };
+
+  const handleBookSeats = () => {
+    if (selectedSeats.length > 0) {
+      alert("Seats booked successfully!");
+      setSelectedSeats([]); 
+    }
   };
 
   return (
@@ -39,7 +46,7 @@ const App = () => {
       <Summary
         selectedSeats={selectedSeats}
         getSeatPrice={getSeatPrice}
-        onBook={() => alert("Seats booked successfully!")}
+        onBook={handleBookSeats}
       />
     </div>
   );
