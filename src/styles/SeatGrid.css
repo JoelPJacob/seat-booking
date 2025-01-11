@@ -1,24 +1,29 @@
-/* src/styles/SeatGrid.css */
 .seat-grid {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    gap: 5px;
-  }
-  .seat-legend {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.seat-legend {
   display: flex;
   justify-content: space-between;
   font-size: 1rem;
-  margin: 10px 0;
+  margin: 20px 0;
 }
+
+.seat-platinum, .seat-gold, .seat-silver {
+  padding: 5px;
+}
+
+.seat-platinum {
+  color: #FF5733;
+}
+
+.seat-gold {
+  color: #FFBF00;
+}
+
 .seat-silver {
-    color: #C0C0C0;
-  }
-  
-  .seat-gold {
-    color: #FFBF00;
-  }
-  
-  .seat-platinum {
-    color: #FF5733;
-  }
-  
+  color: #C0C0C0;
+}

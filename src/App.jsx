@@ -1,4 +1,3 @@
-// src/App.jsx
 import React, { useState } from "react";
 import SeatGrid from "./components/SeatGrid";
 import Summary from "./components/Summary";
@@ -29,7 +28,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1>Seat Booking System</h1>
+      <h1 className="app-title">Seat Booking System</h1>
       <SeatGrid
         rows={rows}
         seatsPerRow={seatsPerRow}
