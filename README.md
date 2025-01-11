@@ -78,6 +78,6 @@ The Seat Booking System is a web application that allows users to view and selec
 ---
 
 ## Contact Information
-- **Email**: [joelpjacob@gmail.com](mailto:joelpjacob@gmail.com)  
+- **Email**: [joelpjacob3@gmail.com](mailto:joelpjacob3@gmail.com)  
 - **GitHub**: [JoelPJacob](https://github.com/JoelPJacob)  
 - **LinkedIn**: [Joel P Jacob](https://linkedin.com/in/joel-p-jacob)  
