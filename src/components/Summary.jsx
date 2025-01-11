@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Summary.css";
 
-const Summary = ({ selectedSeats, getSeatPrice, onBook, onClear }) => {
+const Summary = ({ selectedSeats, getSeatPrice, onBook, onClear, error }) => {
   const totalCost = selectedSeats.reduce((acc, seat) => acc + getSeatPrice(seat[0]), 0);
 
   return (
@@ -23,7 +23,7 @@ const Summary = ({ selectedSeats, getSeatPrice, onBook, onClear }) => {
           Clear
         </div>
       </div>
-      {selectedSeats.length > 8 && <p className="error">You can only select up to 8 seats.</p>}
+      {error && <p className="error">{error}</p>} 
     </div>
   );
 };

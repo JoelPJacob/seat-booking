@@ -11,25 +11,27 @@ const App = () => {
   const [selectedSeats, setSelectedSeats] = useState([]);
 
   const getSeatPrice = (row) => {
-    if (["A", "B"].includes(row)) return pricing.Silver;
+    if (["A", "B"].includes(row)) return pricing.Platinum;
     if (["C", "D"].includes(row)) return pricing.Gold;
-    return pricing.Platinum;
+    return pricing.Silver;
   };
 
   const toggleSeatSelection = (seat) => {
-    setSelectedSeats((prev) =>
-      prev.includes(seat)
-        ? prev.filter((s) => s !== seat)
-        : prev.length < 8
-        ? [...prev, seat]
-        : prev 
-    );
+    if (selectedSeats.includes(seat)) {
+      setSelectedSeats((prev) => prev.filter((s) => s !== seat));
+    } else {
+      if (selectedSeats.length < 8) {
+        setSelectedSeats((prev) => [...prev, seat]);
+      } else {
+        alert("You can only select up to 8 seats.");
+      }
+    }
   };
 
   const handleBookSeats = () => {
     if (selectedSeats.length > 0) {
       alert("Seats booked successfully!");
-      setSelectedSeats([]); 
+      setSelectedSeats([]);
     }
   };
 
