@@ -11,21 +11,32 @@ const SeatGrid = ({ rows, seatsPerRow, selectedSeats, getSeatPrice, toggleSeatSe
                 <span className="seat-silver">Silver (₹100)</span>
             </div>
             <div className="seat-grid">
-                {rows.map((row) => Array(seatsPerRow)
-                    .fill()
-                    .map((_, index) => {
-                        const seatId = `${row}${index + 1}`;
-                        const price = getSeatPrice(row);
-                        return (
-                            <Seat
-                                key={seatId}
-                                id={seatId}
-                                price={price}
-                                isSelected={selectedSeats.includes(seatId)}
-                                onClick={() => toggleSeatSelection(seatId)} />
-                        );
-                    })
-                )}
+                {rows.map((row) => (
+                    <React.Fragment key={row}>
+                        {Array(seatsPerRow)
+                            .fill()
+                            .map((_, index) => {
+                                const seatId = `${row}${index + 1}`;
+                                const price = getSeatPrice(row);
+                                return (
+                                    <Seat
+                                        key={seatId}
+                                        id={seatId}
+                                        price={price}
+                                        isSelected={selectedSeats.includes(seatId)}
+                                        onClick={() => toggleSeatSelection(seatId)}
+                                    />
+                                );
+                            })
+                        }
+                        {row === "F" && (
+                            <>
+                                <div className="screen-label">Screen</div>
+                                <div className="screen"></div>
+                            </>
+                        )}
+                    </React.Fragment>
+                ))}
             </div>
         </>
     );

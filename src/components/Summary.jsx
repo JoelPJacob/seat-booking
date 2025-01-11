@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Summary.css";
 
-const Summary = ({ selectedSeats, getSeatPrice, onBook }) => {
+const Summary = ({ selectedSeats, getSeatPrice, onBook, onClear }) => {
   const totalCost = selectedSeats.reduce((acc, seat) => acc + getSeatPrice(seat[0]), 0);
 
   return (
@@ -15,8 +15,13 @@ const Summary = ({ selectedSeats, getSeatPrice, onBook }) => {
         ))}
       </ul>
       <p className="total-cost">Total: ₹{totalCost}</p>
-      <div className="book-button" onClick={onBook} disabled={selectedSeats.length === 0}>
-        Book Now
+      <div className="buttons">
+        <button className="book-button" onClick={onBook} disabled={selectedSeats.length === 0}>
+          Book Now
+        </button>
+        <button className="clear-button" onClick={onClear} disabled={selectedSeats.length === 0}>
+          Clear
+        </button>
       </div>
       {selectedSeats.length > 8 && <p className="error">You can only select up to 8 seats.</p>}
     </div>

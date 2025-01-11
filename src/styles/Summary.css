@@ -43,6 +43,38 @@
   .book-button:disabled {
     background-color: #ccc;
   }
+
+  .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+  }
+  
+  .book-button,
+  .clear-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .book-button {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .clear-button {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .book-button:disabled,
+  .clear-button:disabled {
+    background-color: #A9A9A9;
+    cursor: not-allowed;
+  }
   
   .error {
     color: red;

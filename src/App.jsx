@@ -33,6 +33,10 @@ const App = () => {
     }
   };
 
+  const handleClearSeats = () => {
+    setSelectedSeats([]);
+  };
+
   return (
     <div className="app">
       <h1 className="app-title">Seat Booking System</h1>
@@ -47,6 +51,7 @@ const App = () => {
         selectedSeats={selectedSeats}
         getSeatPrice={getSeatPrice}
         onBook={handleBookSeats}
+        onClear={handleClearSeats}
       />
     </div>
   );

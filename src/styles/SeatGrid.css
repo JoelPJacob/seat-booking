@@ -28,3 +28,16 @@
 .seat-silver {
   color: #C0C0C0;
 }
+.screen-label {
+  grid-column: 1 / -1;
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.screen {
+  grid-column: 1 / -1;
+  height: 5px;
+  background-color: #888;
+  border-radius: 100%;
+}
