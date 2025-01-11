@@ -52,10 +52,10 @@ The Seat Booking System is a web application that allows users to view and selec
 4. Start the development server:
 
     ```bash
-    npm start
+    npm run dev
     ```
 
-5. Open the browser at `http://localhost:3000` to view the project.
+5. Open the browser at `http://localhost:5173` to view the project.
 
 ---
 
